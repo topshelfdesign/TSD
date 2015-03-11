@@ -1,0 +1,52 @@
+<?php \NV\Theme::output_file_marker(__FILE__); ?>
+
+<div id="header" class="interior">
+
+	<div id="menu" class="show-for-medium-up">
+		<nav class="top-bar centered large-12" data-topbar="">
+			<ul class="title-area">
+				<li class="name">
+					<a href="<?php print get_bloginfo("url"); ?>"><img src="<?php print NV_IMG; ?>/logo-h.png" alt=""></a>
+				</li>
+				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+			<section class="top-bar-section right">
+				<?php
+				wp_nav_menu(array(
+						'container' => '',
+						'items_wrap' => '<ul id="%1$s" class="%2$s item small-2">%3$s</ul>',
+				));
+				?>
+			</section>
+		</nav>
+	</div> <!-- End menu -->
+  
+<!-- 	<div id="mobile-menu">
+		<nav class="top-bar show-for-small-only" data-topbar role="navigation">
+			<ul class="title-area">
+				<li class="name">
+					<a href="<?php print get_bloginfo("url"); ?>"><img src="<?php print NV_IMG; ?>/logo-h.png" class="logo" alt=""></a>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+
+			<section class="top-bar-section">
+				<?php
+/* 					$menu_items = wp_nav_menu(array(
+						'menu' => 'interior-menu',
+						'container' => '',
+						'items_wrap' => '<ul class="right">%3$s</ul>',
+						'echo' => false
+					));
+
+					$menu_items = str_replace('small-2 columns', '', $menu_items);
+					$menu_items = str_replace('sub-menu', 'dropdown', $menu_items);
+					$menu_items = str_replace('menu-item-has-children', 'has-dropdown', $menu_items);
+
+					echo $menu_items; */
+				?>
+			</section>
+		</nav>
+	</div> --> <!-- #mobile-menu -->
+</div>
